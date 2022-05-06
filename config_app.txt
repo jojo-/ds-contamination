@@ -1,0 +1,19 @@
+[device]
+name=remondis_1
+
+[source]
+#mode 0=webcam, 1=uri
+#uri=location for mode 1, or device for mode 0 
+mode=0
+uri=/dev/video0
+#uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_720p.mp4
+
+[output]
+enable-display=1
+enable-rtsp=0
+enable-fps=0
+enable-file-out=0
+
+[data]
+data-enable=0
+data-rate=0

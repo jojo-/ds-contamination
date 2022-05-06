@@ -1,0 +1,14 @@
+[Unit]
+Description=VIVA REMONDIS
+After=network-online.target
+
+[Service]
+User=dll
+WorkingDirectory=/path/to/remondis 
+ExecStartPre=/bin/sleep 60
+ExecStart=/usr/bin/python3 remondis.py config_app.txt
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
